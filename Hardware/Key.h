@@ -8,26 +8,26 @@
  */
 #ifndef __KEY_H
 #define __KEY_H
-/*Í·ÎÄ¼ş*/
+/*å¤´æ–‡ä»¶*/
 #include "stm32f10x.h" 
 #include "string.h"
 #include "Delay.h"
 #include "OLED.h"    
-/*ºê¶¨Òå*/
-#define KEY_NUM 4//°´¼üÊıÁ¿
-/*½á¹¹ÌåÀàĞÍ¶¨Òå*/
+/*å®å®šä¹‰*/
+#define KEY_NUM 4//æŒ‰é”®æ•°é‡
+/*ç»“æ„ä½“ç±»å‹å®šä¹‰*/
 typedef struct 
 {
-	uint32_t Key_RCC_GPIO;//°´¼ü¶Ë¿Ú±àºÅÊ±ÖÓ
+	uint32_t Key_RCC_GPIO;//æŒ‰é”®ç«¯å£ç¼–å·æ—¶é’Ÿ
 
-	GPIO_TypeDef* Key_GPIO_Port;//°´¼ü¶Ë¿Ú±àºÅ
+	GPIO_TypeDef* Key_GPIO_Port;//æŒ‰é”®ç«¯å£ç¼–å·
 
-	uint16_t Key_GPIO_Pin;//°´¼ü¶Ë¿ÚÒı½ÅºÅ
+	uint16_t Key_GPIO_Pin;//æŒ‰é”®ç«¯å£å¼•è„šå·
 
-	BitAction Key_State;//°´¼ü×´Ì¬
+	BitAction Key_State;//æŒ‰é”®çŠ¶æ€
 
 }Key_InitTypeDef;
-/*º¯Êı*/
+/*å‡½æ•°*/
 void Key_Init(Key_InitTypeDef Key_InitArray[]);
 uint16_t Key_Scan(Key_InitTypeDef Key_InitArray[]);
 #endif

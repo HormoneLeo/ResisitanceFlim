@@ -13,9 +13,9 @@
 
 
 /**
- * @brief °´¼ü±éÀú³õÊ¼»¯
+ * @brief æŒ‰é”®éå†åˆå§‹åŒ–
  * 
- * @param Key_InitArray °´¼ü½á¹¹ÌåÊı×é
+ * @param Key_InitArray æŒ‰é”®ç»“æ„ä½“æ•°ç»„
  */
 void Key_Init(Key_InitTypeDef Key_InitArray[])
 {
@@ -24,7 +24,7 @@ void Key_Init(Key_InitTypeDef Key_InitArray[])
 		/* code */
 		RCC_APB2PeriphClockCmd(Key_InitArray[i].Key_RCC_GPIO, ENABLE);
 		GPIO_InitTypeDef GPIO_InitStructure;
-		GPIO_InitStructure.GPIO_Mode 	= 	GPIO_Mode_IPU;//ÉÏÀ­ÊäÈëÄ£Ê½
+		GPIO_InitStructure.GPIO_Mode 	= 	GPIO_Mode_IPU;//ä¸Šæ‹‰è¾“å…¥æ¨¡å¼
 		GPIO_InitStructure.GPIO_Speed 	= 	GPIO_Speed_50MHz;
 
 		GPIO_InitStructure.GPIO_Pin 	= 	Key_InitArray[i].Key_GPIO_Pin ;
@@ -38,10 +38,10 @@ void Key_Init(Key_InitTypeDef Key_InitArray[])
 
 
 /**
- * @brief °´¼ü×´Ì¬±éÀúÉ¨Ãè
+ * @brief æŒ‰é”®çŠ¶æ€éå†æ‰«æ
  * 
- * @param Key_InitArray °´¼ü½á¹¹ÌåÊı×é
- * @return Ã¿Ò»Î»´ú±í¶ÔÓ¦Î»°´Å¥µÄ×´Ì¬£¬1±íÊ¾±»°´ÏÂ£¬0±íÊ¾Î´°´ÏÂ 
+ * @param Key_InitArray æŒ‰é”®ç»“æ„ä½“æ•°ç»„
+ * @return æ¯ä¸€ä½ä»£è¡¨å¯¹åº”ä½æŒ‰é’®çš„çŠ¶æ€ï¼Œ1è¡¨ç¤ºè¢«æŒ‰ä¸‹ï¼Œ0è¡¨ç¤ºæœªæŒ‰ä¸‹ 
  */
 uint16_t Key_Scan(Key_InitTypeDef Key_InitArray[])
 {
